@@ -53,7 +53,7 @@ h4 {
 
 p {
   font-size: 20px;
-  line-height: 0.5;
+  line-height: 1.25;
 }
 
 li {
@@ -69,17 +69,25 @@ li {
   font-size: 18px;
 }
 
-.related-full {
+.related-list {
+  list-style: none;
+  line-height: 0.5;
+}
+
+.related-element {
+  list-style: none;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.related-text {
   font-size: 17px;
+  line-height: 0.5;
 }
 
 .related-author-name {
   font-style: italic;
   font-weight: bold;
-}
-
-.related {
-  list-style: none;
 }
 
 /* footer p {
