@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>The Basic Language of the Web: HTML</title>
+    <!--
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+    -->
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -15,8 +23,9 @@
     <h6>The Basic Language of the Web: HTML</h6>
     -->
 
-    <header>
+    <header class="top-header">
       <h1>📘 The Code Magazine</h1>
+      <!--<h1 style="color: blue">📘 The Code Magazine</h1>-->
 
       <nav>
         <a href="blog.html">Blog</a>
@@ -37,7 +46,9 @@
           width="50"
         />
 
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
 
         <img
           src="img/post-img.jpg"
@@ -60,6 +71,7 @@
       </p>
 
       <h3>What is HTML?</h3>
+
       <p>
         HTML stands for <strong>H</strong>yper<strong>T</strong>ext
         <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
@@ -112,7 +124,7 @@
     <aside>
       <h4>Related posts</h4>
 
-      <ul>
+      <ul class="related">
         <li>
           <img
             src="img/related-1.jpg"
@@ -121,12 +133,16 @@
             width="75"
           />
           <a href="#">How to Learn Web Development</a>
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-full">
+            by <a class="related-author-name">Jonas Schmedtmann</a>
+          </p>
         </li>
         <li>
           <img src="img/related-2.jpg" alt="Lightning" width="75" heigth="75" />
           <a href="#">The Unknown Powers of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-full">
+            by <a class="related-author-name">Jim Dillon</a>
+          </p>
         </li>
         <li>
           <img
@@ -136,11 +152,16 @@
             height="75"
           />
           <a href="#">Why JavaScript is Awesome</a>
-          <p>By Matilda</p>
+          <p class="related-full">
+            by <a class="related-author-name">Matilda</a>
+          </p>
         </li>
       </ul>
     </aside>
 
-    <footer>Copyright &copy; 2027 by The Code Magazine.</footer>
+    <footer>
+      <!--Copyright &copy; 2027 by The Code Magazine.-->
+      <p id="copyright">Copyright &copy; 2027 by The Code Magazine.</p>
+    </footer>
   </body>
 </html>
