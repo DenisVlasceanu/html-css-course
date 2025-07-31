@@ -1,17 +1,62 @@
+* {
+  /* border-top: 10px solid cyan; */
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #555 !important;
+  font-family: sans-serif;
+  /* border-top: 10px solid brown; */
+  /* padding: 25px;
+  padding-left: 10px; */
+  /* border: 10px solid red;
+  border-top: none; */
+  /* padding: 0;
+  margin: 0; */
+}
+
+button {
+  font-size: 30px;
+  padding: 15px;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 110px;
+}
+
+.container {
+  width: 500px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  position: relative;
+}
+
 header,
 aside,
 h3 {
   text-align: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
-  color: #555;
+.front-image {
+  /* width: 800px; */
+  width: 100%;
+  height: auto;
+  /* margin: 100px; */
+}
+
+.top-header,
+aside {
+  background-color: #e9e9e9;
+  border: 5px solid crimson;
+}
+
+.top-header {
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  /* height: 80px; */
 }
 
 h1,
@@ -23,7 +68,7 @@ h4 {
 h2,
 h3,
 h4 {
-  font-style: bold;
+  font-weight: bold;
 }
 
 h3,
@@ -32,19 +77,54 @@ h4 {
 }
 
 h1 {
-  color: blue;
+  color: #2025ad;
   font-size: 26px;
   font-style: italic;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* p::first-line {
+  color: magenta;
+}
+
+h3 + p {
+  color: white;
+} */
+
+h2::after {
+  content: "TOP ARTICLE";
+  color: black;
+  font-size: 15px;
+  font-style: normal;
+  font-family: serif;
+  display: inline-block;
+  padding: 2px;
+  background-color: yellow;
+  position: absolute;
+  top: 39px;
+  left: 390px;
+  /* border: 10px ridge #09e918; */
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #09e918;
+}
+
 h2 {
   color: crimson;
-  font-size: 40px;
+  font-size: 35px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 h3 {
   color: darkmagenta;
   border: 2px solid rgb(16, 175, 16);
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -54,10 +134,22 @@ h4 {
 p {
   font-size: 20px;
   line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 20px;
 }
 
 li {
   font-size: 18px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* article header p {
@@ -76,13 +168,122 @@ li {
 
 .related-element {
   list-style: none;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin: 25px 0px;
 }
 
 .related-text {
   font-size: 17px;
   line-height: 0.5;
+  margin: 15px 0;
+  cursor: auto;
+}
+
+footer {
+  margin: 15px 0;
+}
+
+#copyright {
+  font-size: 15px;
+}
+
+/* #copyright {
+  color: red;
+} */
+
+.copyright {
+  color: blue;
+}
+
+/* .copcop {
+  color: yellow;
+} */
+
+footer p {
+  color: green;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+aside {
+  border: 5px dashed crimson;
+  border-left: none;
+  border-right: none;
+  padding: 40px 0px;
+}
+
+article header {
+  border: 5px dashed crimson;
+  border-top: none;
+  margin-bottom: 40px;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(even) {
+  color: rgb(189, 111, 16);
+} */
+
+/* article header:first-child {
+  background-color: rgb(178, 14, 237);
+}
+
+article p:nth-child(1) {
+  color: rgb(42, 213, 30);
+} */
+
+a:link,
+a:visited {
+  color: rgb(211, 98, 6);
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: italic;
+  font-weight: bold;
+  color: greenyellow;
+  text-decoration: underline wavy greenyellow;
+}
+
+a:active {
+  font-style: italic;
+  color: rgb(10, 125, 212);
+  text-decoration: underline rgb(10, 125, 212);
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child,
+nav a:visited:last-child,
+nav a:hover:last-child,
+nav a:active:last-child {
+  margin-right: 0;
 }
 
 .related-author-name {
@@ -90,31 +291,16 @@ li {
   font-weight: bold;
 }
 
-/* footer p {
-  font-size: 15px;
+.related-author-name:link,
+.related-author-name:visited,
+.related-author-name:hover,
+.related-author-name:active {
+  text-decoration: none;
+  color: #555;
+  cursor: auto;
+}
+
+/* nav p,
+nav a:link {
+  font-size: 18px;
 } */
-
-#copyright {
-  font-size: 15px;
-}
-
-body {
-  background-color: #fcfcfc;
-}
-
-.top-header,
-aside {
-  background-color: #e9e9e9;
-  border: 5px solid crimson;
-}
-
-aside {
-  border: 5px dashed crimson;
-  border-left: none;
-  border-right: none;
-}
-
-article header {
-  border: 5px dashed crimson;
-  border-top: none;
-}

@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  /* color: black; */
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+article {
+  width: 825px;
+  border: 4px solid black;
+  margin: 50px auto;
+  /* position: relative; */
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  padding: 10px 0;
+  position: relative;
+}
+
+h2::before {
+  content: "SALE";
+  letter-spacing: 3px;
+  color: white;
+  font-size: 12px;
+  background-color: red;
+  padding: 7px 18px;
+  top: -17px;
+  left: -36px;
+  position: absolute;
+}
+
+/* .sale-tag {
+  letter-spacing: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: red;
+  padding: 7px 15px;
+  display: inline-block;
+  top: -17px;
+  left: -38px;
+  position: absolute;
+} */
+
+.price {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.free-shipping {
+  font-size: 12px;
+  color: #777;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.colors-line {
+  margin: 20px 0;
+}
+
+.color-box {
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.color-box:last-child {
+  margin-right: 0;
+}
+
+.color1 {
+  background-color: black;
+}
+
+.color2 {
+  background-color: blue;
+}
+
+.color3 {
+  background-color: red;
+}
+
+.color4 {
+  background-color: yellow;
+}
+
+.color5 {
+  background-color: green;
+}
+
+.color6 {
+  background-color: brown;
+}
+
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+button {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  background-color: black;
+  border: none;
+  border-top: 4px solid black;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
