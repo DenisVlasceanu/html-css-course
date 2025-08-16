@@ -11,10 +11,15 @@
       }
       .el--2 {
         background-color: orangered;
+        /* width: 300px; */
+        /* grid-column: 1 / span 3; */
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
       }
       .el--3 {
         background-color: green;
         height: 150px;
+        /* grid-row: 2 / 6; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -24,15 +29,40 @@
       }
       .el--6 {
         background-color: steelblue;
+        align-self: end;
       }
       .el--7 {
-        background-color: yellow;
+        background-color: gold;
+        justify-self: center;
       }
       .el--8 {
         background-color: crimson;
+        /* margin: 30px; */
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      .el--9 {
+        background-color: blue;
+      }
+      .el--10 {
+        background-color: yellow;
+      }
+      .el--11 {
+        background-color: red;
+      }
+      .el--12 {
+        background-color: aqua;
+        grid-row: 4 / span 5;
+      }
+      .el--13 {
+        background-color: brown;
+      }
+      .el--14 {
+        background-color: yellowgreen;
       }
 
       .container--1 {
+        display: none;
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
@@ -40,19 +70,36 @@
         margin: 40px;
 
         /* CSS GRID */
+        /* display: grid; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        /* grid-template-rows: 1fr auto; */
+        column-gap: 10px;
+        row-gap: 20px;
+        /* gap: 100px; */
+        /* margin: 10px; */
       }
 
       .container--2 {
+        /* display: none; */
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 150px 200px 125px;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-rows: 250px 100px;
+        justify-content: center;
+        align-content: center;
+        justify-items: right;
+        align-items: start;
       }
     </style>
   </head>
@@ -66,6 +113,12 @@
       <div class="el el--6">(6) languages</div>
       <div class="el el--7">(7) to</div>
       <div class="el el--8">(8) learn</div>
+      <div class="el el--9">(9) learn</div>
+      <div class="el el--10">(10) learn</div>
+      <div class="el el--11">(11) learn</div>
+      <div class="el el--12">(12) learn</div>
+      <div class="el el--13">(13) learn</div>
+      <div class="el el--14">(14) learn</div>
     </div>
 
     <div class="container--2">
