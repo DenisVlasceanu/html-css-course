@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /* MAIN COLOR: #087f5b */
+      /* GRAY COLOR: #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .carousel {
+        background-color: #087f5b;
+        width: 800px;
+        margin: 96px auto;
+        /* padding: 32px; */
+        /* padding-left: 96px; */
+        /* padding-right: 48px; */
+        padding: 32px 48px 32px 96px;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        gap: 96px;
+      }
+
+      img {
+        height: 200px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        transform: scale(1.5);
+        align-self: center;
+      }
+
+      .author-quote {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #e6fcf5;
+      }
+
+      .author-name {
+        font-size: 14px;
+        margin-top: 32px;
+        color: #c3fae8;
+      }
+
+      .author-profession {
+        font-size: 12px;
+        margin-top: 4px;
+        color: #c3fae8;
+      }
+
+      .btn {
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        border: none;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .btn svg {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .btn-left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn-right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .dots {
+        display: flex;
+        gap: 12px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+      }
+
+      .dot {
+        background-color: #fff;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot-active {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="carousel">
+      <img src="maria.jpg" alt="Maria de Almeida" />
+      <blockquote>
+        <p class="author-quote">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim
+          non dolorum asperiores quam labore, porro est aspernatur nam vero
+          temporibus."
+        </p>
+        <p class="author-name">Maria de Almeida</p>
+        <p class="author-profession">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot dot-active">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>

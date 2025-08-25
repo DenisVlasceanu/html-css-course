@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /* MAIN COLOR: #087f5b */
+      /* GRAY COLOR: #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .accordion-item {
+        /* background-color: #ddd; */
+        padding: 24px 32px 32px 32px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto 1fr;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 24px;
+      }
+
+      .active {
+        border-top: 4px solid #087f5b;
+      }
+
+      .inactive {
+        padding-bottom: 0;
+      }
+
+      .accordion-item span {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .active span {
+        color: #099268;
+      }
+
+      .number {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .inactive .number {
+        color: #ced4da;
+      }
+
+      .title {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .accordion-item .selectable-icon {
+        stroke: #099268;
+        width: 24px;
+        height: 24px;
+        justify-self: end;
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      p {
+        line-height: 1.6;
+        grid-column: 2;
+        grid-row: 2;
+        margin-top: 8px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: disc;
+        color: #868e96;
+        margin-left: 18px;
+        margin-bottom: 8px;
+        grid-column: 2;
+        grid-row: 3;
+      }
+
+      .inactive p {
+        display: none;
+      }
+
+      .inactive ul {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="accordion">
+      <div class="accordion-item inactive">
+        <span class="number">01</span>
+        <span class="title">Where are these chairs assembled?</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="selectable-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut sit rem
+          nisi esse debitis aperiam qui ut distinctio placeat omnis iste
+          recusandae reiciendis nihil quas, repellat quisquam earum quaerat
+          culpa?
+        </p>
+        <ul>
+          <li>Eius neque ea magnam voluptates delectus maxime</li>
+          <li>
+            Perspiciatis distinctio, deleniti voluptate tenetur aliquid
+            perderendis
+          </li>
+          <li>Aspernatur veniam repellendus eligendi reiciendis</li>
+          <li>fuga esse deserunt. Aliquid voluptatibus nihil impedit</li>
+        </ul>
+      </div>
+
+      <div class="accordion-item active">
+        <span class="number">02</span>
+        <span class="title">How long do I have to return my chair?</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="selectable-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut sit rem
+          nisi esse debitis aperiam qui ut distinctio placeat omnis iste
+          recusandae reiciendis nihil quas, repellat quisquam earum quaerat
+          culpa?
+        </p>
+        <ul>
+          <li>Eius neque ea magnam voluptates delectus maxime</li>
+          <li>
+            Perspiciatis distinctio, deleniti voluptate tenetur aliquid
+            perderendis
+          </li>
+          <li>Aspernatur veniam repellendus eligendi reiciendis</li>
+          <li>fuga esse deserunt. Aliquid voluptatibus nihil impedit</li>
+        </ul>
+      </div>
+
+      <div class="accordion-item inactive">
+        <span class="number">03</span>
+        <span class="title">Do you ship to countries outside the EU?</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="selectable-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut sit rem
+          nisi esse debitis aperiam qui ut distinctio placeat omnis iste
+          recusandae reiciendis nihil quas, repellat quisquam earum quaerat
+          culpa?
+        </p>
+        <ul>
+          <li>Eius neque ea magnam voluptates delectus maxime</li>
+          <li>
+            Perspiciatis distinctio, deleniti voluptate tenetur aliquid
+            perderendis
+          </li>
+          <li>Aspernatur veniam repellendus eligendi reiciendis</li>
+          <li>fuga esse deserunt. Aliquid voluptatibus nihil impedit</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
