@@ -87,11 +87,10 @@ a:active {
   width: 21px;
   height: 21px;
   display: inline-block;
-  margin-right: 10px;
 }
 
-.color-box:last-child {
-  margin-right: 0;
+.color-box:not(:last-child) {
+  margin-right: 10px;
 }
 
 .color1 {

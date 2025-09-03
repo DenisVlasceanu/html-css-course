@@ -193,11 +193,10 @@ h3 {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
 }
 
-.chair-details li:last-child {
-  margin-bottom: 0;
+.chair-details li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .chair-icon {

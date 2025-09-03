@@ -96,12 +96,11 @@ ol {
 
 li {
   font-size: 20px;
-  margin-bottom: 10px;
   /* display: inline; */
 }
 
-li:last-child {
-  margin-bottom: 0;
+li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 /* footer p {

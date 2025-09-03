@@ -68,19 +68,12 @@ img {
 }
 
 /* FEATURES */
-.features-icon {
-}
 
 .features-title {
   margin-bottom: 16px;
 }
 
-.features-text {
-}
-
 /* TESTIMONIAL */
-.testimonial-section {
-}
 
 .testimonial-box {
   grid-column: 2 / -1;
@@ -114,14 +107,10 @@ h3 {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.chair-details li:not(:last-child) {
   margin-bottom: 24px;
-}
-
-.chair-details li:last-child {
-  margin-bottom: 0;
-}
-
-.chair-icon {
 }
 
 .chair-price {

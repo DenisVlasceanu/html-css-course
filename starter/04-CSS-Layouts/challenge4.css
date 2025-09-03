@@ -180,11 +180,10 @@ button:hover {
 
 .color-box {
   display: inline-block;
-  margin-right: 10px;
 }
 
-.color-box:last-child {
-  margin-right: 0;
+.color-box:not(:last-child) {
+  margin-right: 10px;
 }
 
 .product-features p {

@@ -144,12 +144,11 @@ ol {
 
 li {
   font-size: 18px;
-  margin-bottom: 5px;
   cursor: pointer;
 }
 
-li:last-child {
-  margin-bottom: 0;
+li:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 /* article header p {
@@ -275,15 +274,14 @@ nav a:visited,
 nav a:hover,
 nav a:active {
   margin-top: 10px;
-  margin-right: 10px;
   display: inline-block;
 }
 
-nav a:link:last-child,
-nav a:visited:last-child,
-nav a:hover:last-child,
-nav a:active:last-child {
-  margin-right: 0;
+nav a:link:not(:last-child),
+nav a:visited:not(:last-child),
+nav a:hover:not(:last-child),
+nav a:active:not(:last-child) {
+  margin-right: 10px;
 }
 
 .related-author-name {
