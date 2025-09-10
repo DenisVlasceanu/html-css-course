@@ -23,7 +23,7 @@ const current_year = new Date().getFullYear();
 footer_copyright_year.textContent = current_year;
 
 // Smooth scrolling animation
-// SCROLL BEHAVIOR DOESN'T WORK
+// SCROLL BEHAVIOR DOESN'T WORK FOR PC, WORKS FOR IPHONE
 const all_links = document.querySelectorAll("a:link");
 all_links.forEach(function (link) {
   link.addEventListener("click", function (e) {

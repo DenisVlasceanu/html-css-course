@@ -94,7 +94,7 @@ html {
   /* 10px / 16px = 0.625 */
   font-size: 62.5%;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* DOESN'T WORK */
+  scroll-behavior: smooth; /* DOESN'T WORK ON PC, WORKS ON IPHONE */
 }
 
 body {
