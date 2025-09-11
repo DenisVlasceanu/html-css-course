@@ -429,12 +429,36 @@
 }
 
 /*********************************/
+/* BELOW 30*16 = 480px */
+/*********************************/
+
+@media (max-width: 30em) {
+  .logos img {
+    height: 1.5rem;
+  }
+}
+
+/*********************************/
 /* BELOW 27*16 = 432px */
 /*********************************/
 
 @media (max-width: 27em) {
+  .logos img {
+    height: 1.4rem;
+  }
+
   .plan:nth-child(2)::after {
     right: -16%;
+  }
+}
+
+/*********************************/
+/* BELOW 25*16 = 400px */
+/*********************************/
+
+@media (max-width: 25em) {
+  .logos img {
+    height: 1.2rem;
   }
 }
 
@@ -453,6 +477,10 @@
 /*********************************/
 
 @media (max-width: 22em) {
+  .logos img {
+    height: 1.1rem;
+  }
+
   .plan:nth-child(2)::after {
     right: -21%;
   }
